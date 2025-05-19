@@ -11,7 +11,7 @@ public class ListProductsController {
     private ProductRepository productRepository = new ProductRepository();
     private ListProductsService listProductsService = new ListProductsService(productRepository);
     
-    public List<Product> list() throws SQLException {
+    public List<Product> execute() throws SQLException {
         List<Product> products = listProductsService.execute();
         return products;
     }

@@ -35,7 +35,7 @@ public class ProductRepository implements InMemoryDatabaseRepository {
             stmt.setInt(3, product.getQuantity());
             stmt.executeUpdate();
         } catch (SQLException e) {
-            System.err.println("Error SQL: " + e.getMessage());
+            System.err.println("SQL Error: " + e.getMessage());
         }
     }
 
@@ -60,7 +60,7 @@ public class ProductRepository implements InMemoryDatabaseRepository {
                 products.add(product);
             }
         } catch (SQLException e) {
-            System.err.println("Error SQL: " + e.getMessage());
+            System.err.println("SQL Error: " + e.getMessage());
         }
 
         return products;
